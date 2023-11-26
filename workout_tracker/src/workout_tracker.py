@@ -26,8 +26,8 @@ def manage_user_input():
     while True:
         text = input("> ")
 
-        if input := re.search(r"^([1-8]\.?)$", text):
-            action_number = input.group(0)
+        if user_input := re.search(r"^([1-8]\.?)$", text):
+            action_number = user_input.group(0)
             break
 
     match action_number.replace(".", ""):
